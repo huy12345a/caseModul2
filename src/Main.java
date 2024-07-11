@@ -14,9 +14,10 @@ public class Main implements Menu {
                 System.out.println(" 1 : them phuong tien");
                 System.out.println(" 2 : xoa phuong tien");
                 System.out.println(" 3 : hien thi danh sach ");
-                System.out.println(" 4 : ghi du lieu vao file ");
-                System.out.println(" 5 : copy du lieu tu file khac");
-                System.out.println(" 6 : thoat chuong trinh");
+                System.out.println(" 4 : tim kiem phuong tien theo bien so: ");
+                System.out.println(" 5 : ghi du lieu vao file ");
+                System.out.println(" 6 : copy du lieu tu file khac");
+                System.out.println(" 7 : thoat chuong trinh");
                 int choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
                     case ADD_VEHICLE:
@@ -28,6 +29,9 @@ public class Main implements Menu {
                     case SHOW_VEHICLE:
                         vehicleManage.showVehicles();
                         break;
+                    case SEACH_VEHICLE:
+                        vehicleManage.searchVehicle(scanner);
+                        break;
                     case WRITE_FILE:
                         WriteReadFile.writeFile(vehicleManage, scanner);
                         break;
@@ -36,6 +40,7 @@ public class Main implements Menu {
                         break;
                     case EXIT:
                         System.exit(0);
+
                 }
 
             } while (true);

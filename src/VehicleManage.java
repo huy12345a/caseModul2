@@ -54,6 +54,15 @@ public class VehicleManage {
         }
         System.out.println(vehicles);
     }
+    public void searchVehicle(Scanner scanner) {
+        System.out.println("nhap bien so xe can tim : ");
+        int licenseplates = Integer.parseInt(scanner.nextLine());
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getLicenseplates() == licenseplates) {
+                System.out.println(vehicle);
+            }
+        }
+    }
 
     public void showVehicles() {
         for (Vehicle vehicle : vehicles) {
