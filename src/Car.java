@@ -14,6 +14,7 @@ public class Car extends Vehicle {
         this.seats = seats;
     }
     public String toString() {
-        return super.toString() + "\nSeats: " + seats;
+        String s ="Licenseplates : "+ getLicenseplates() + ", Name : " + getName() + ", Year : " + getYear() + ", color : " + getColor() + ", Seats : " + getSeats();
+        return s;
     }
 }

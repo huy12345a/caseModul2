@@ -1,5 +1,5 @@
 public class Motorbyke extends Vehicle {
-    private int wattage;
+    private final int wattage;
 
     public Motorbyke(int id, String name, int years, String color, int wattage) {
         super(id, name, years, color);
@@ -10,10 +10,7 @@ public class Motorbyke extends Vehicle {
         return wattage;
     }
 
-    public void setWattage(int wattage) {
-        this.wattage = wattage;
-    }
     public String toString() {
-        return super.toString() + "\nWattage: " + wattage;
+        return "Licenseplates : " + getLicenseplates() + ", Name : " + getName() + ", Year : " + getYear() + ", color : " + getColor() + ", Wattage : " + getWattage();
     }
 }

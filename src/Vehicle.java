@@ -1,33 +1,37 @@
-public class Vehicle {
-    private int id;
+import java.io.Serializable;
+
+public abstract class Vehicle implements Serializable {
+    private int licenseplates;
     private String name;
     private int year;
     private String color;
+    private String type;
 
-    public Vehicle(int id, String name, int year, String color) {
-        this.id = id;
+    public Vehicle(int licenseplates, String name, int year, String color) {
+        this.licenseplates = licenseplates;
         this.name = name;
         this.year = year;
         this.color = color;
     }
 
-    public Vehicle() {
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public int getId() {
-        return id;
+    public int getLicenseplates() {
+        return licenseplates;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setLicenseplates(int licenseplates) {
+        this.licenseplates = licenseplates;
     }
 
-    public String getManufacturer() {
+    public String getName() {
         return name;
     }
 
-    public void setManufacturer(String manufacturer) {
-        this.name = manufacturer;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getYear() {
@@ -44,12 +48,5 @@ public class Vehicle {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public static void main(String[] args) {
-
-    }
-    public String toString() {
-        return "id: " + id + ", name: " + name + ", year: " + year + ", color: " + color;
     }
 }
